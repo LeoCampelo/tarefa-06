@@ -4,48 +4,305 @@
     <meta charset="UTF-8">
     <title>Cardápio Web Café</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <!-- 
+    ===========================================
+    Bloco de Cabeçalho do Site - <header>
+    -------------------------------------------
+    Este trecho define o cabeçalho principal da página.
+    Apresenta o nome do site, uma breve descrição e um
+    botão de chamada para ação que leva o usuário ao
+    formulário de contato ou reserva.
+    ===========================================
+    -->
     <header id="cabecalho">
         <div class="container">
             <h1>Web Café</h1>
             <p>O melhor café, feito com paixão e bytes de qualidade.</p>
+            <a href="#contato-form" class="btn-reserva">Reserve sua Mesa</a>
         </div>
     </header>
 
+    <!-- ===========================================
+     Container da Seção "Sobre Nós"
+    -------------------------------------------
+     Centraliza o conteúdo da seção e mantém o
+     alinhamento e espaçamento consistentes.
+    =========================================== -->
+    <section id="sobre-nos" class="categoria">
+        <div class="container">
+            <h2 class="titulo-categoria">Sobre Nós</h2>
+            <p class="introducao-sobre">No Web Café, unimos a paixão pelo café artesanal com a inovação digital. 
+                                        Fundado em 2024, somos o ponto de encontro perfeito para desenvolvedores, 
+                                        criativos e amantes de uma boa xícara.</p>
+        </div>
+    </section>
+
+    <!-- ===========================================
+     Container - Bebidas Quentes
+    -------------------------------------------
+     Agrupa os itens do cardápio da categoria
+     "Bebidas Quentes", mantendo a estrutura
+     visual dentro da área principal.
+    =========================================== -->
     <main id="cardapio-principal">
-        <section id="bebidas-quentes" class="categoria">
-            <h2 class="titulo-categoria">Bebidas Quentes</h2>
-            <div class="itens-grid">
-                <article class="item-card">
-                    <h3 class="item-nome">Espresso Simples</h3>
-                    <p class="item-descricao">A dose perfeita de sabor e energia, pura e intensa.</p>
-                    <span class="item-preco">R$ 5,00</span>
-                </article>
-                <article class="item-card">
-                    <h3 class="item-nome">Latte Cremoso</h3>
-                    <p class="item-descricao">Espresso com leite vaporizado e uma fina camada de espuma.</p>
-                    <span class="item-preco destaque">R$ 12,00</span>
-                </article>
+        <div class="container">
+            <section id="bebidas-quentes" class="categoria">
+                <h2 class="titulo-categoria">Bebidas Quentes</h2>
+                <div class="itens-grid">
+                    <article class="item-card">
+                        <img src="src/bebidas_quentes/expresso_simples.png" alt="Foto de um Espresso Simples" class="item-imagem">
+                        <h3 class="item-nome">Espresso Simples</h3>
+                        <p class="item-descricao">A dose perfeita de sabor e energia, pura e intensa.</p>
+                        <span class="item-preco">R$ 5,00</span>
+                    </article>
+                    <article class="item-card">
+                        <img src="src/bebidas_quentes/latte_cremoso.png" alt="Foto de um Latte Cremoso" class="item-imagem"> 
+                        <h3 class="item-nome">Latte Cremoso</h3>
+                        <p class="item-descricao">Espresso com leite vaporizado e uma fina camada de espuma.</p>
+                        <span class="item-preco destaque">R$ 12,00</span>
+                    </article>
+                    <article class="item-card">
+                        <img src="src/bebidas_quentes/cappuccino.png" alt="Foto de um Cappuccino do Desenvolvedor" class="item-imagem">
+                        <h3 class="item-nome">Cappuccino do Desenvolvedor</h3>
+                        <p class="item-descricao">Café, leite vaporizado, chocolate e canela. A receita clássica, sem bugs.</p>
+                        <span class="item-preco">R$ 14,00</span>
+                    </article>
+                    <article class="item-card">
+                        <img src="src/bebidas_quentes/mocha_quente.png" alt="Foto de um Mocha Quente" class="item-imagem">
+                        <h3 class="item-nome">Mocha Quente</h3>
+                        <p class="item-descricao">Uma deliciosa combinação de chocolate, espresso e leite quente.</p>
+                        <span class="item-preco">R$ 15,50</span>
+                    </article>
+                    <article class="item-card">
+                        <img src="src/bebidas_quentes/chocolate_quente.png" alt="Foto de um Chocolate Quente Gourmet" class="item-imagem">
+                        <h3 class="item-nome">Chocolate Quente Gourmet</h3>
+                        <p class="item-descricao">Feito com chocolate belga e chantilly fresco. Pura indulgência!</p>
+                        <span class="item-preco destaque">R$ 16,00</span>
+                    </article>
                 </div>
-        </section>
+            </section>
+        </div>
 
-        <section id="sobremesas" class="categoria">
-            <h2 class="titulo-categoria">Sobremesas</h2>
-            <div class="itens-grid">
-                <article class="item-card">
-                    <h3 class="item-nome">Brownie</h3>
-                    <p class="item-descricao">Chocolate duplo com nozes.</p>
-                    <span class="item-preco">R$ 15,00</span>
-                </article>
+        <!-- ===========================================
+        Container - Bebidas Geladas
+        -------------------------------------------
+        Contém o cardápio de bebidas frias e
+        refrescantes, organizado em grade de itens.
+        =========================================== -->
+        <div class="container">
+            <section id="bebidas-geladas" class="categoria">
+                <h2 class="titulo-categoria">Bebidas Geladas e Refrescantes</h2>
+                <div class="itens-grid">
+                    <article class="item-card">
+                        <img src="src/bebidas_geladas/cold_brew.png" alt="Foto de um Cold Brew" class="item-imagem">
+                        <h3 class="item-nome">Cold Brew</h3>
+                        <p class="item-descricao">Café extraído a frio por 18 horas. Sabor suave e altamente cafeinado.</p>
+                        <span class="item-preco destaque">R$ 13,00</span>
+                    </article>
+                    <article class="item-card">
+                        <img src="src/bebidas_geladas/soda_italiana.png" alt="Foto de Sodas Italianas" class="item-imagem">
+                        <h3 class="item-nome">Sodas Italianas</h3>
+                        <p class="item-descricao">Sabores de frutas vermelhas, limão siciliano ou maçã verde. Super leves.</p>
+                        <span class="item-preco">R$ 10,00</span>
+                    </article>
+                    <article class="item-card">
+                        <img src="src/bebidas_geladas/cha_gelado.png" alt="Foto de Chá Gelado Detox" class="item-imagem">
+                        <h3 class="item-nome">Chá Gelado Detox</h3>
+                        <p class="item-descricao">Blend de hibisco e gengibre. Perfeito para hidratar seu código!</p>
+                        <span class="item-preco">R$ 9,00</span>
+                    </article>
+                    <article class="item-card">
+                        <img src="src/bebidas_geladas/frape.png" alt="Foto de um Frapê de Caramelo" class="item-imagem">
+                        <h3 class="item-nome">Frapê de Caramelo</h3>
+                        <p class="item-descricao">Café batido com gelo, caramelo, leite e chantilly. O favorito do verão.</p>
+                        <span class="item-preco">R$ 17,00</span>
+                    </article>
                 </div>
-        </section>
+            </section>
+        </div>
 
-        <section id="reserva-footer">
-            <p>Faça a sua reserva pelo telefone: (99) 99999-9999</p>
-        </section>
+        <!-- ===========================================
+        Container - Pratos Executivos
+        -------------------------------------------
+        Exibe os pratos servidos no horário de almoço,
+        incluindo aviso de disponibilidade e opções
+        especiais como vegetarianas.
+        =========================================== -->
+        <div class="container">
+            <section id="pratos-executivos" class="categoria horario-restrito">
+                <h2 class="titulo-categoria">Pratos Executivos</h2>
+                <p class="aviso-horario">**Disponível apenas no horário de almoço (11:30 - 14:30). 
+                                           Não deixe de conferir as opções vegetarianas.**</p>
+                <div class="itens-grid">
+                    <article class="item-card">
+                        <img src="src/pratos_executivos/filet_mignon.png" alt="Foto de um Executivo Filet Mignon" class="item-imagem">
+                        <h3 class="item-nome">Executivo Filet Mignon</h3>
+                        <p class="item-descricao">Medalhão ao molho mostarda, purê de batatas e salada fresca.</p>
+                        <span class="item-preco destaque">R$ 45,00</span>
+                    </article>
+                    <article class="item-card">
+                        <img src="src/pratos_executivos/frango_citrico.png" alt="Foto de um Frango Grelhado Cítrico" class="item-imagem">
+                        <h3 class="item-nome">Frango Grelhado Cítrico</h3>
+                        <p class="item-descricao">Peito de frango marinado, arroz integral e legumes salteados.</p>
+                        <span class="item-preco">R$ 38,00</span>
+                    </article>
+                    <article class="item-card">
+                        <img src="src/pratos_executivos/prato_vegano.png" alt="Foto de um Prato Vegano Completo" class="item-imagem">
+                        <h3 class="item-nome">Prato Vegano Completo</h3>
+                        <p class="item-descricao">Quinoa, cogumelos frescos e mix de folhas verdes. Leve e nutritivo.</p>
+                        <span class="item-preco">R$ 40,00</span>
+                    </article>
+                </div>
+                <div class="separador"></div>
+            </section>
+        </div>
+
+        <!-- ===========================================
+        Container - Salgados
+        -------------------------------------------
+        Apresenta opções de lanches rápidos e leves,
+        ideais para o almoço ou pausa do café.
+        =========================================== -->
+        <div class="container">
+            <section id="salgados" class="categoria">
+                <h2 class="titulo-categoria">Salgados para o Almoço Rápido</h2>
+                <div class="itens-grid">
+                    <article class="item-card">
+                        <img src="src/salgados/pao_queijo.png" alt="Foto de Pão de Queijo Recheado" class="item-imagem">
+                        <h3 class="item-nome">Pão de Queijo Recheado</h3>
+                        <p class="item-descricao">Tradicional mineiro, quentinho e crocante por fora. Disponível em 3 queijos.</p>
+                        <span class="item-preco">R$ 7,50</span>
+                    </article>
+                    <article class="item-card">
+                        <img src="src/salgados/quiche_palmito.png" alt="Foto de Quiche de Palmito" class="item-imagem">
+                        <h3 class="item-nome">Quiche de Palmito</h3>
+                        <p class="item-descricao">Massa leve com recheio cremoso. Opção vegetariana.</p>
+                        <span class="item-preco">R$ 16,00</span>
+                    </article>
+                    <article class="item-card">
+                        <img src="src/salgados/sanduiche.png" alt="Foto de Sanduíche Integral (Club Code)" class="item-imagem">
+                        <h3 class="item-nome">Sanduíche Integral (Club Code)</h3>
+                        <p class="item-descricao">Peito de peru, queijo minas, tomate seco no pão integral. Leve e saudável.</p>
+                        <span class="item-preco">R$ 19,00</span>
+                    </article>
+                </div>
+            </section>
+        </div>
+
+        <!-- ===========================================
+        Container - Sobremesas
+        -------------------------------------------
+        Mostra a seleção de doces e sobremesas do
+        Web Café, com destaque para itens especiais.
+        =========================================== -->
+        <div class="container">
+            <section id="sobremesas" class="categoria">
+                <h2 class="titulo-categoria">Sobremesas</h2>
+                <div class="itens-grid">
+                    <article class="item-card">
+                        <img src="src/sobremesas/brownie.png" alt="Foto de um Brownie" class="item-imagem">
+                        <h3 class="item-nome">Brownie</h3>
+                        <p class="item-descricao">Chocolate duplo com nozes.</p>
+                        <span class="item-preco">R$ 15,00</span>
+                    </article>
+                    <article class="item-card">
+                        <img src="src/sobremesas/torta_limao.png" alt="Foto de Torta de Limão (Azedinha)" class="item-imagem">
+                        <h3 class="item-nome">Torta de Limão (Azedinha)</h3>
+                        <p class="item-descricao">Massa crocante, recheio cítrico e merengue tostado.</p>
+                        <span class="item-preco">R$ 14,50</span>
+                    </article>
+                    <article class="item-card">
+                        <img src="src/sobremesas/cookie_gigante.png" alt="Foto de um Cookie Gigante" class="item-imagem">
+                        <h3 class="item-nome">Cookie Gigante</h3>
+                        <p class="item-descricao">O clássico americano com gotas de chocolate ao leite e baunilha.</p>
+                        <span class="item-preco destaque">R$ 8,00</span>
+                    </article>
+                    <article class="item-card">
+                        <img src="src/sobremesas/cheesecake.png" alt="Foto de Cheesecake de Frutas Vermelhas" class="item-imagem">
+                        <h3 class="item-nome">Cheesecake de Frutas Vermelhas</h3>
+                        <p class="item-descricao">A cremosidade perfeita combinada com a acidez das frutas da estação.</p>
+                        <span class="item-preco destaque">R$ 18,00</span>
+                    </article>
+                </div>
+            </section>
+        </div>
+
+        <!-- ===========================================
+        Container - Formulário de Contato/Newsletter
+        -------------------------------------------
+        Reúne o formulário de inscrição e informações
+        de contato, incentivando a interação dos
+        clientes com o Web Café.
+        =========================================== -->
+        <div class="container">
+            <section id="contato-form" class="categoria">
+                <h2 class="titulo-categoria">Receba Nossas Novidades</h2>
+                <p class="subtitulo-form">Assine nossa newsletter para promoções exclusivas e eventos de codificação!</p>
+                <form action="#" method="POST" class="form-newsletter">
+                    <div class="form-group">
+                        <label for="nome">Seu Nome:</label>
+                        <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Seu E-mail:</label>
+                        <input type="email" id="email" name="email" placeholder="email@exemplo.com" required>
+                    </div>
+                    <button type="submit" class="btn-envio">Inscrever-se</button>
+                </form>
+            </section>
+        </div>
     </main>
 
+    <!-- ===========================================
+    Seção Final - Contatos e Redes
+    -------------------------------------------
+    Exibe informações de contato, redes sociais
+    e oportunidades de carreira.
+    =========================================== -->
+    <section id="sobre-nos" class="categoria">
+        <div class="container">
+            <div class="grid-sobre">
+                <div class="info-contato">
+                    <h3>Nosso Contato</h3>
+                    <p><i class="fas fa-phone-alt"></i> Telefone: (99) 99999-9999</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Endereço: Rua dos Bits, 1024 - Bairro do Código, Cidade Digital - CD</p>
+                    <p><i class="fas fa-clock"></i> Horário de Funcionamento: Seg a Sex: 8h-20h | Sáb: 9h-18h</p>
+                </div>
+
+                <div class="redes-sociais">
+                    <h3>Conecte-se Conosco</h3>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+
+                <div class="carreiras">
+                    <h3>Estamos Contratando!</h3>
+                    <p>Você é apaixonado(a) por café e tecnologia? Estamos sempre em busca de talentos para nossa equipe de baristas, desenvolvedores web e atendentes. <a href="#" class="link-carreiras">Confira nossas vagas</a> e junte-se ao Web Café!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================================
+    Seção de Reserva Rápida no Rodapé
+    -------------------------------------------
+    Exibe o telefone de reserva de forma destacada.
+    =========================================== -->
+    <section id="reserva-footer">
+            <p>Faça a sua reserva pelo telefone: (99) 99999-9999</p>
+    </section>
+
+    <!-- ===========================================
+    Rodapé do Site
+    -------------------------------------------
+    Exibe créditos e informações sobre a atividade
+    prática de HTML e CSS.
+    =========================================== -->
     <footer id="rodape">
         <p class="creditos">&copy; 2025 - Web Café | Atividade Prática de HTML & CSS.</p>
     </footer>

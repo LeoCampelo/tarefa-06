@@ -1,4 +1,11 @@
-/* --- 1. ESTILOS BÁSICOS --- */
+/* =========================================================
+   1. ESTILOS BÁSICOS
+------------------------------------------------------------
+   Define a estrutura global da página: remoção de margens
+   padrão, controle de espaçamento, tipografia principal,
+   cores de fundo e comportamento da classe container.
+   Também inclui o estilo base para botões e links primários.
+========================================================= */
 * {
     margin: 0;
     padding: 0;
@@ -19,26 +26,66 @@ body {
     padding: 20px; 
 }
 
-/* --- 2. CABEÇALHO E TÍTULOS --- */
+.btn-reserva {
+    display: inline-block;
+    background-color: #8e44ad; 
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px; 
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.btn-reserva:hover {
+    background-color: #7d3c98;
+    transform: translateY(-2px); 
+}
+
+/* =========================================================
+   2. CABEÇALHO E TÍTULOS
+------------------------------------------------------------
+   Aplica o fundo principal do cabeçalho com imagem e
+   gradiente, define alinhamento central e tipografia de
+   destaque para o título principal.
+========================================================= */
 #cabecalho {
-    background-color: #2c3e50;
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), 
+        url('src/capa_web_cafe.png'); 
+        
+    background-size: cover; 
+    
+    background-repeat: no-repeat;
+    background-position: center center;
+
     color: white;
     text-align: center;
-    padding: 40px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    padding: 100px 0; 
+    
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); 
+    border-bottom-left-radius: 0; 
+    border-bottom-right-radius: 0; 
 }
 
-h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 3em;
-    margin-bottom: 10px;
-    letter-spacing: 2px; 
+
+#cabecalho h1 {
+    font-size: 4em; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); 
+    margin-bottom: 5px;
 }
 
-/* --- 3. LAYOUT PRINCIPAL (PROPRIEDADES AVANÇADAS) --- */
+/* =========================================================
+   3. LAYOUT PRINCIPAL
+------------------------------------------------------------
+   Define a estrutura base das seções do site, com espaçamento,
+   divisórias e tipografia consistente. O uso de grid é aplicado
+   para organização dos itens do cardápio.
+========================================================= */
 .categoria {
     padding: 40px 0;
-    border-bottom: 1px solid #ddd; 
+    border-bottom: 2px solid #ddd; 
 }
 
 .titulo-categoria {
@@ -64,7 +111,13 @@ h1 {
     gap: 30px; 
 }
 
-/* --- 4. ESTILIZAÇÃO DOS ITENS (CARDS) --- */
+/* =========================================================
+   4. ESTILIZAÇÃO DOS ITENS (CARDS)
+------------------------------------------------------------
+   Aplica o design dos cartões de produtos, incluindo efeitos
+   de hover, tipografia, espaçamento, bordas e destaques de
+   preço e imagens. Cria uma aparência moderna e interativa.
+========================================================= */
 .item-card {
     background-color: white;
     padding: 25px;
@@ -100,7 +153,99 @@ h1 {
     color: #c0392b;
 }
 
-/* --- 5. RODAPÉ E OUTRAS SEÇÕES --- */
+.aviso-horario {
+    text-align: center;
+    font-weight: 700;
+    color: #2b496e;
+    background-color: #f2dede;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    letter-spacing: 0.5px; 
+}
+
+.item-imagem {
+    width: 100%; 
+    height: 220px; 
+    border-radius: 6px; 
+    margin-bottom: 15px;
+    object-fit: cover; 
+    display: block; 
+}
+
+/* =========================================================
+   5. ESTILO DO FORMULÁRIO DE NEWSLETTER
+------------------------------------------------------------
+   Cria um bloco visual atraente e centralizado para o
+   formulário, com campos de entrada estilizados, foco com
+   destaque e botão de envio responsivo.
+========================================================= */
+.subtitulo-form {
+    text-align: center;
+    margin-bottom: 25px;
+    font-style: italic;
+    color: #555;
+}
+
+.form-newsletter {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #ecf0f1;
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease; 
+}
+
+input[type="text"]:focus, input[type="email"]:focus {
+    border-color: #8e44ad; 
+    outline: none;
+    box-shadow: 0 0 5px rgba(142, 68, 173, 0.5);
+}
+
+.btn-envio {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #34495e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.btn-envio:hover {
+    background-color: #2c3e50;
+}
+
+
+/* =========================================================
+   6. RODAPÉ E OUTRAS SEÇÕES
+------------------------------------------------------------
+   Configura o rodapé e a seção de reservas, mantendo a
+   coerência visual com o restante do layout e garantindo
+   legibilidade e espaçamento adequados.
+========================================================= */
 #reserva-footer {
     background-color: #ecf0f1;
     text-align: center;
@@ -116,3 +261,93 @@ h1 {
     clear: both;
 }
 
+/* =========================================================
+   7. SEÇÃO SOBRE NÓS
+------------------------------------------------------------
+   Define a aparência da seção institucional, com cores
+   suaves, grid responsivo, ícones e links de redes sociais.
+   Inclui também destaque para o link de carreiras.
+========================================================= */
+#sobre-nos {
+    background-color: #fcfcfc; 
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+#sobre-nos .titulo-categoria {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.introducao-sobre {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.8;
+}
+
+.grid-sobre {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 30px;
+    text-align: left;
+    margin-top: 30px;
+}
+
+.grid-sobre h3 {
+    color: #8e44ad;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 8px;
+}
+
+.grid-sobre p {
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.grid-sobre i {
+    margin-right: 10px;
+    color: #8e44ad;
+    font-size: 1.1em;
+}
+
+.link-carreiras {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.link-carreiras:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+.social-icon {
+    display: inline-block;
+    color: white; 
+    background-color: #3498db; 
+    width: 45px;
+    height: 45px;
+    border-radius: 50%; 
+    text-align: center;
+    line-height: 45px;
+    font-size: 1.5em; 
+    margin: 0 8px 10px 0;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none; 
+}
+
+
+.social-icon i {
+    color: white; 
+}
+
+.social-icon:hover {
+    background-color: #2980b9;
+    transform: translateY(-3px);
+}
